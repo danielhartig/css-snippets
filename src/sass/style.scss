@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'pagelayout';
+
+a {
+    color: $color-accent-primary-default;
+    text-decoration: none;
+    transition: color 1s;
+    &:hover {
+        color: $color-accent-primary-darker;
+    }
+}
+
+nav {
+    $nav-size: 200px;
+
+    @include square($nav-size);
+    margin: 0 auto;
+    ul {
+        @include globe($nav-size);
+        box-shadow: 5px 5px 5px $color-mono-darker;
+        padding: $nav-size/4 0;
+    }
+    li {
+        @include transparent-menu-item;
+        line-height: $nav-size/8;
+        a {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+$font-family-default: Arial, Helvetica, sans-serif;
+
+$color-mono-base: #fff;
+$color-mono-lightest: #f5f5f5;
+$color-mono-lighter: #f0f0f0;
+$color-mono-light: #d5d5d5;
+$color-mono-dark: #666666;
+$color-mono-darker: #4a4a4a;
+$color-mono-darkest: #333333;
+
+$color-accent-primary-default: hsl(150, 40%, 50%);
+$color-accent-primary-light: lighten($color-accent-primary-default, 10%);
+$color-accent-primary-lighter: lighten($color-accent-primary-default, 20%);
+$color-accent-primary-dark: darken($color-accent-primary-default, 10%);
+$color-accent-primary-darker: darken($color-accent-primary-default, 20%);
+
+$padding-min: 3px;
+$padding-small: 5px;
+$padding-medium: 10px;
+$padding-large: 20px;
+$padding-max: 50px;

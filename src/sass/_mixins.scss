@@ -1,0 +1,30 @@
+@mixin no-pad {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin square($size: 200px) {
+    width: $size;
+    height: $size;
+}
+@mixin globe($size: 200px, 
+             $color-in: $color-mono-lightest, 
+             $color-out: $color-mono-darkest) {
+    @include square($size);
+    border-radius: $size / 2;
+    background: $color-mono-lightest;
+    background-image: radial-gradient(circle at center, $color-in 10%, $color-out 100%);
+    overflow: hidden;
+}
+@mixin transparent-menu-item($background-color: $color-mono-lighter, 
+                             $border-color: $color-mono-darker, 
+                             $trans-default: 0.85, 
+                             $trans-hover: 0.5) {
+    background-color: transparentize($background-color, $trans-default);
+    border-bottom: 1px solid transparentize($border-color, $trans-default);
+    transition: background-color 1s, border-bottom 1s;
+    &:hover {
+        background-color: transparentize($background-color, $trans-hover);
+        border-bottom: 1px solid transparentize($border-color, $trans-hover);
+    }
+}
