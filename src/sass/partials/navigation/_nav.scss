@@ -1,0 +1,30 @@
+.centered-shadow-menu {
+    margin: $padding-large auto;
+    width: $nav-size;
+    .menu-list {
+        background: $color-mono-light;
+        box-shadow: 5px 5px 5px $color-mono-darker;
+        &-item a {
+            text-align: center;
+        }
+    }
+}
+.square-menu {
+    @extend .centered-shadow-menu;
+    @include square($nav-size);
+    .menu-list {
+        padding: $nav-size/4 0;
+        &-item {
+            line-height: $nav-size/8 - 0.8px;
+        }
+    }
+}
+.globe-menu {
+    @extend .square-menu;
+    .menu-list {
+        @include globe($nav-size);  
+    }
+}
+.menu-list-item {
+    @include transparent-menu-item;
+}

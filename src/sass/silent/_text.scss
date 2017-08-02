@@ -1,0 +1,7 @@
+%default-link {
+    color: $color-accent-primary-default;
+    text-decoration: none;
+    &:hover {
+        color: $color-accent-primary-darker;
+    }
+}

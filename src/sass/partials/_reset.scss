@@ -13,3 +13,7 @@ ul {
     list-style: none;
     text-align: center;
 }
+li > a {
+    display: block;
+    text-align: left;
+}
