@@ -1,12 +1,7 @@
 .centered-shadow-menu {
-    margin: $padding-large auto;
-    width: $nav-size;
+    @include center-box;
     .menu-list {
-        background: $color-mono-light;
-        box-shadow: 5px 5px 5px $color-mono-darker;
-        &-item a {
-            text-align: center;
-        }
+        @include shadow-box;
     }
 }
 .square-menu {
